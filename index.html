@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script type="module" src="/src/main.ts" defer></script>
+    <title>Credit Card</title>
+  </head>
+
+  <body>
+    <div id="app">
+      <!-- Credit Card -->
+      <div class="creditCard">
+        <div class="creditCard__top">
+          <div class="creditCard__top__chip">
+            <img src="./src/images/crediiCardChip.png" alt="credit-card-chip">
+          </div>
+          <div class="creditCard__top__brand">
+            <img src="./src/images/creditCardBrand.png" alt="credit-card-brand">
+          </div>
+        </div>
+        <div class="creditCard__number" id="printedCardNumber">#### #### #### ####</div>
+        <div class="creditCard__bottom">
+          <div class="creditCard__bottom__holder">
+            <p class="little__title">Card Holder</p>
+            <p id="printedCardHolder">FULL NAME</p>
+          </div>
+          <div class="creditCard__bottom__date">
+            <p class="little__title">Expires</p>
+            <p id="printedCardExpirationDate">MM/YY</p>
+          </div>
+        </div>
+      </div>
+      <!-- form -->
+      <form action="submit" class="form-card">
+          <div class="input-div">
+              <label for="cardNumberInput">Card Number</label>
+              <input type="number" id="cardNumberInput" placeholder="0123 4567 8901 2345">
+          </div>
+          <div class="input-div">
+              <label for="">Card Holder</label>
+              <input type="text" id="cardHolderInput" placeholder="Max Mustermann">
+          </div>
+          <div  class="input-wrapper">
+              <div>
+                  <label for="">Expiration Date</label>
+                  <input type="text" id="expirationDateInput" placeholder="12/24">
+              </div>
+              <div>
+                  <label for="cvvInput">CVV</label>
+                  <input type="number" id="cvvInput" placeholder="1234">
+              </div>
+          </div>
+          <button>Submit</button>
+      </form>
+    </div>
+  </body>
+</html>
